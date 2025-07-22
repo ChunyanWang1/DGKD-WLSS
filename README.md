@@ -24,12 +24,11 @@ Weakly-supervised semantic segmentation aims to assign category labels to each p
 
 ## Preparation
 
-1. Data preparation.
-   Download [darkened PASCAL VOC 2012](http://) and corresponding depth images [vis_depth_voc](http://) datasets, then put them in ./dataset/.
-   Download [LIS] and corresponding depth images [vis_depth_lis](http://) datasets, then put them in ./dataset/.
+1. Download [darkened PASCAL VOC 2012](http://) and corresponding depth images [vis_depth_voc](http://) datasets, then put them in ./dataset/.
+2. Download [LIS] and corresponding depth images [vis_depth_lis](http://) datasets, then put them in ./dataset/.
 2. Download pre-trained models.
-   Download the pretrained weight: [ilsvrc-cls_rna-a1_cls1000_ep-0001.params](https://drive.google.com/file/d/1W6NJmhu77ZlXidvCEhEj5jHOIHo_oFKe/view?usp=sharing) (pre-trained on ImageNet)  and place them into 
-   `./pretrained/`.
+   Download the pretrained weight: [pretrained_ckpts](https://drive.google.com/drive/folders/1v2hBOX5DzxNUx4QxAdR3dK3uw66ZOOUv?usp=drive_link) and place them into 
+   `./pretrained_ckpts/`.
    
  
 
