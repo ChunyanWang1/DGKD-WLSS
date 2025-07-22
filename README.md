@@ -8,10 +8,10 @@ Chunyan Wang, Dong Zhang, Jinhui Tang
 Weakly-supervised semantic segmentation aims to assign category labels to each pixel using weak annotations, significantly reducing manual annotation costs. Although existing methods have achieved remarkable progress in well-lit scenarios, their performance significantly degrades in low-light environments due to two fundamental limitations: severe image quality degradation (e.g., low contrast, noise, and color distortion) and the inherent constraints of weak supervision. These factors collectively lead to unreliable class activation maps and semantically ambiguous pseudo-labels, ultimately compromising the model's ability to learn discriminative feature representations. To address these problems, we propose Diffusion-Guided Knowledge Distillation for Weakly-Supervised Low-light Semantic Segmentation (DGKD-WLSS), a novel framework that synergistically combines Diffusion-Guided Knowledge Distillation (DGKD) with Depth-Guided Feature Fusion (DGF2). DGKD aligns normal-light and low-light features via diffusion-based denoising and knowledge distillation, while DGF2 integrates depth maps as illumination-invariant geometric priors to enhance structural feature learning. Extensive experiments demonstrate the effectiveness of DGKD-WLSS, which achieves state-of-the-art performance in weakly supervised semantic segmentation tasks under low-light conditions. 
 
 ## The overall architecture
-<img src="./figures/overview.pdf" alt="drawing"/><br> 
+<img src="./figures/overview.png" alt="drawing"/><br> 
 
 ## Qualitative results
-<img src="./figures/wsss-fig.pdf" alt="drawing"/><br>
+<img src="./figures/wsss-fig.png" alt="drawing"/><br>
 
 
 ## Requirements
