@@ -32,13 +32,7 @@ class DDIM(nn.Module):
         depth_map: Tensor with shape bs, 1, h, w
         depth_mask: Tensor with shape bs, 1, h, w
         """
-        feat = self.trans(feat)
-        if self.use_ae:
-            hidden_gt_feat, rec_gt_feat = self.ae(gt_feat)
-            rec_loss = F.mse_loss(gt_feat, rec_gt_feat)
-            gt_feat = hidden_gt_feat.detach()
-        else:
-            rec_loss = torch.zeros(1, device=feat.device)[0]
+        #feat = self.trans(feat)
         refined_feat = self.pipeline(
             batch_size=feat.shape[0],
             device=feat.device,

@@ -5,7 +5,6 @@ from .loss import CriterionKD
 from .dist_kd import DIST
 from .kl_div import KLDivergence
 #from .new_ddim import SegRefiner
-from .mmdloss import MMDLoss
 from functools import partial
 import math
 

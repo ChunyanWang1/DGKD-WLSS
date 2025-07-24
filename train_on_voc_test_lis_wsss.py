@@ -140,11 +140,11 @@ def parse_args():
     # checkpoint and log
     parser.add_argument('--resume', type=str, default=None,
                         help='put the path to resuming file if needed')
-    parser.add_argument('--save-dir', default='./work_dirs/dgkd-wlss/',
+    parser.add_argument('--save-dir', default='./work_dirs/dgkd-wlss-voc-lis/',
                         help='Directory for saving checkpoint models')
     parser.add_argument('--save-epoch', type=int, default=10,
                         help='save model every checkpoint-epoch')
-    parser.add_argument('--log-dir', default='./work_dirs/dgkd-wlss/',
+    parser.add_argument('--log-dir', default='./work_dirs/dgkd-wlss-voc-lis/',
                         help='Directory for saving checkpoint models')
     parser.add_argument('--log-iter', type=int, default=10,
                         help='print log every log-iter')

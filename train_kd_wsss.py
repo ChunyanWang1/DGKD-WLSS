@@ -36,8 +36,6 @@ from losses.dist_kd import DIST
 from losses.kl_div import KLDivergence
 from torch.cuda.amp import autocast, GradScaler
 
-from depth_estimator import networks
-from depth_estimator.layers import disp_to_depth
 import matplotlib as mpl
 import matplotlib.cm as cm
 from PIL import ImageFile
