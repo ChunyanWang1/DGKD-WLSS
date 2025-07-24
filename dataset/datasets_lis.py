@@ -105,7 +105,7 @@ def get_img_path2(img_name, lis_root,img_set):
 
 def get_img_path3(img_name, lis_root):
     if '_' in img_name:
-        img_path='/opt/data/private/DGKD-WLSS/dataset/dark_VOC2012/vis_depth_voc'
+        img_path='/opt/data/private/DGKD-WLSS/dataset/vis_depth_voc'
         return os.path.join(img_path, img_name + '_depth.png')
     else:
         return os.path.join(lis_root, IMG_FOLDER_NAME3, img_name + '_depth.png')
