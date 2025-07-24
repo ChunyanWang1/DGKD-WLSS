@@ -18,7 +18,7 @@ from . import imutils
 
 IMG_FOLDER_NAME = 'JPEGImages' 
 IMG_FOLDER_NAME2 = "dark_VOC2012" 
-IMG_FOLDER_NAME3='vis_depth'
+IMG_FOLDER_NAME3='vis_depth_voc'
 MASK_FOLDER_NAME = 'SegmentationClassAug'
 ANNOT_FOLDER_NAME = "Annotations"
 IGNORE = 255
