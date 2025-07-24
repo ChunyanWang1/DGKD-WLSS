@@ -63,6 +63,7 @@ Weakly-supervised semantic segmentation aims to assign category labels to each p
      --data_list ./dataset/voc12/val.txt \ 
      --pretrained $trained_model \
      --save_dir ./runs/logs/
+    ```
 
 ### Train on dark LIS.
 1. Training:
@@ -85,6 +86,7 @@ Weakly-supervised semantic segmentation aims to assign category labels to each p
      --data_list ./dataset/LIS/test_dark.txt \ 
      --pretrained $trained_model \
      --save_dir ./runs/logs/
+    ```
 
 ### Train on darkened VOC2012 and test on dark LIS.
 1. Training:
@@ -107,6 +109,7 @@ Weakly-supervised semantic segmentation aims to assign category labels to each p
      --data_list ./dataset/LIS/test_dark.txt \ 
      --pretrained $trained_model \
      --save_dir ./runs/logs/
+    ```
 
 
 ## Acknowledgements
