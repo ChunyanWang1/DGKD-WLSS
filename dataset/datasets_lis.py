@@ -51,7 +51,7 @@ N_CAT = len(CAT_LIST)
 
 CAT_NAME_TO_NUM = dict(zip(CAT_LIST,range(len(CAT_LIST))))
 
-cls_labels_dict = np.load('/opt/data/private/diffkd_segmentation/dataset/voc12/cls_labels.npy', allow_pickle=True).item()
+cls_labels_dict = np.load('/opt/data/private/DGKD-WLSS/dataset/voc12/cls_labels.npy', allow_pickle=True).item()
 
 def denorm(ori_images):
     #ori_images = image.permute(0, 2, 3, 1)#.cpu().numpy()
@@ -82,7 +82,7 @@ def load_image_label_list_from_npy(img_name_list):
 
 def get_img_path(img_name, lis_root,img_set):
     if '_' in str(img_name):
-        img_path='/opt/data/private/diffkd_segmentation/dataset/VOC2012/JPEGImages'
+        img_path='/opt/data/private/DGKD-WLSS/dataset/VOC2012/JPEGImages'
         return os.path.join(img_path, img_name + '.jpg')
     else:
         img_name=str(int(img_name)-1)
@@ -90,14 +90,14 @@ def get_img_path(img_name, lis_root,img_set):
 
 def get_label_path(img_name, lis_root,img_set):
     if '_' in img_name:
-        img_path='/opt/data/private/diffkd_segmentation/dataset/VOC2012/SegmentationClassAug'
+        img_path='/opt/data/private/DGKD-WLSS/dataset/VOC2012/SegmentationClassAug'
         return os.path.join(img_path, img_name + '.png')
     else:
         return os.path.join(lis_root, MASK_FOLDER_NAME,img_set, 'masks',img_name + '.png')
 
 def get_img_path2(img_name, lis_root,img_set):
     if '_' in img_name:
-        img_path='/opt/data/private/diffkd_segmentation/dataset/dark_VOC2012'
+        img_path='/opt/data/private/DGKD-WLSS/dataset/dark_VOC2012'
         return os.path.join(img_path, img_name + '.jpg')
     else:
         #img_name=str(int(img_name)+1)  
@@ -105,7 +105,7 @@ def get_img_path2(img_name, lis_root,img_set):
 
 def get_img_path3(img_name, lis_root):
     if '_' in img_name:
-        img_path='/opt/data/private/diffkd_segmentation/dataset/VOC2012/vis_depth'
+        img_path='/opt/data/private/DGKD-WLSS/dataset/VOC2012/vis_depth'
         return os.path.join(img_path, img_name + '_depth.png')
     else:
         return os.path.join(lis_root, IMG_FOLDER_NAME3, img_name + '_depth.png')
