@@ -40,5 +40,77 @@ Weakly-supervised semantic segmentation aims to assign category labels to each p
 | WideResNet38 |54.1 (lis)| [dgkd_wlss_LIS_best_model.pth](https://drive.google.com/file/d/1aK_xXLMxDyT9aVL05CtsVPS2Sd-Jkhkr/view?usp=drive_link) |
 | WideResNet38 |46.3 (train on voc test on LIS)| [dgkd_wlss_VOC_LIS_best_model.pth](https://drive.google.com/file/d/1S4BUghHUwGrh2H6Eygb1ZaNCA_xTvRJU/view?usp=drive_link) |
 
+## Usage
+
+###Train on darkened VOC2012.
+1. Training:
+   ```
+   python train_kd_wsss.py  \
+     --teacher_model ssss \
+     --student_model ssss \
+     --data ./dataset/darkened_VOC2012 \
+     --train_list ./dataset/voc12/train_aug.txt \
+     --val_list ./dataset/voc12/train.txt \
+     --teacher_pretrained ./ckpts/model_enc_e020Xs0.928.pth \
+     --student_pretrained_base  ./ckpts/ilsvrc-cls_rna-a1_cls1000_ep-0001.params
+   ```
+
+2. Inference.
+
+   Download the trained model from https://drive.google.com/file/d/1PkUkGdwviFajLyI1FOE_ePbeXy-rZuCP/view?usp=drive_link, set ```--pretrained``` and then run:
+   ```
+   python test_wsss.py \
+     --data_list ./dataset/voc12/val.txt \ 
+     --pretrained $trained_model \
+     --save_dir ./runs/logs/
+
+###Train on dark LIS.
+1. Training:
+   ```
+   python train_kd_wsss_lis.py  \
+     --teacher_model ssss \
+     --student_model ssss \
+     --data ./dataset/LIS \
+     --train_list ./dataset/LIS/train_dark.txt \
+     --val_list ./dataset/LIS/test_dark.txt \
+     --teacher_pretrained ./ckpts/model_lis_normal.pth \
+     --student_pretrained_base  ./ckpts/ilsvrc-cls_rna-a1_cls1000_ep-0001.params
+   ```
+
+2. Inference.
+
+   Download the trained model from https://drive.google.com/file/d/1aK_xXLMxDyT9aVL05CtsVPS2Sd-Jkhkr/view?usp=drive_link, set ```--pretrained``` and then run:
+   ```
+   python test_wsss_lis.py \
+     --data_list ./dataset/LIS/test_dark.txt \ 
+     --pretrained $trained_model \
+     --save_dir ./runs/logs/
+
+###Train on darkened VOC2012 and test on dark LIS.
+1. Training:
+   ```
+   python train_on_voc_test_lis_wsss.py  \
+     --teacher_model ssss \
+     --student_model ssss \
+     --data ./dataset/LIS \
+     --train_list ./dataset/LIS/voc_train_8_classes_train.txt \
+     --val_list ./dataset/LIS/voc_train_8_classes_val.txt \
+     --teacher_pretrained ./ckpts/model_voc_8_normal.pth \
+     --student_pretrained_base  ./ckpts/ilsvrc-cls_rna-a1_cls1000_ep-0001.params
+   ```
+
+2. Inference.
+
+   Download the trained model from https://drive.google.com/file/d/1S4BUghHUwGrh2H6Eygb1ZaNCA_xTvRJU/view?usp=drive_link, set ```--pretrained``` and then run:
+   ```
+   python test_wsss_lis.py \
+     --data_list ./dataset/LIS/test_dark.txt \ 
+     --pretrained $trained_model \
+     --save_dir ./runs/logs/
+
+
+## Acknowledgements
+We sincerely thank [Tao Huang](https://proceedings.neurips.cc/paper_files/paper/2023/file/cdddf13f06182063c4dbde8cbd5a5c21-Paper-Conference.pdf) for his great work in  NeurIPS 2023. We borrow codes heavly from his repositories [diffkd](https://github.com/hunto/DiffKD).
+
 
 
