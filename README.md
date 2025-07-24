@@ -23,7 +23,7 @@ Weakly-supervised semantic segmentation aims to assign category labels to each p
 
 ## Preparation
 
-1. Download [darkened PASCAL VOC 2012](https://drive.google.com/file/d/1EMVeWPgkiToG_HWBy7o0iG_5FF1HLbvk/view?usp=drive_link) and corresponding depth images [vis_depth_voc](https://drive.google.com/file/d/1l6MbmJAwk5SYWdxJDzCuQoR8FscoxgAS/view?usp=drive_link) datasets, then put them in ./dataset/.
+1. Download [PASCAL VOC 2012](http://host.robots.ox.ac.uk/pascal/VOC/voc2012/#devkit),[darkened PASCAL VOC 2012](https://drive.google.com/file/d/1EMVeWPgkiToG_HWBy7o0iG_5FF1HLbvk/view?usp=drive_link) and corresponding depth images of dark voc [vis_depth_voc](https://drive.google.com/file/d/1l6MbmJAwk5SYWdxJDzCuQoR8FscoxgAS/view?usp=drive_link) datasets, then put them in ./dataset/.
 2. Download [LIS:RGB-dark and RGB-normal](https://drive.google.com/drive/folders/1KpC82G_H1CI35lmnB2LYr9aK3FQcahAC) and corresponding depth images [vis_depth_lis](https://drive.google.com/file/d/1vw--djckEz0wLdVqYQZ8cKtbfpPG4EE3/view?usp=drive_link) datasets, then put them in ./dataset/LIS/.
 3. Download pre-trained models.
    Download the pretrained weight: [pretrained_ckpts](https://drive.google.com/drive/folders/1v2hBOX5DzxNUx4QxAdR3dK3uw66ZOOUv?usp=drive_link) and place them into 
